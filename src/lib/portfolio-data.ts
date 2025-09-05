@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Github, Linkedin, Mail, Phone, Briefcase, GraduationCap, Code, Star, Bot } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Briefcase, GraduationCap, Code, Star, Bot, Link as LinkIcon, CheckSquare } from 'lucide-react';
 
 export const personalDetails = {
   name: "KALIDINDI VISHNU DATTA RAGHU VARMA",
@@ -8,8 +8,8 @@ export const personalDetails = {
   email: "kalidindivishnuvarma@gmail.com",
   phone: "+91-9381462553",
   portfolio: "#",
-  linkedin: "https://www.linkedin.com/",
-  github: "https://github.com/",
+  linkedin: "https://www.linkedin.com/in/vishnu-varma-kalidindi/",
+  github: "https://github.com/KVishnuVarma",
   summary: "Software developer with expertise in the MERN stack. Experience in building real-world applications, delivering user-friendly and responsive solutions throughout the development stack. Developed innovative solutions to address real-world challenges through code. Actively Enhanced Problem-solving Skills through efficient programming techniques in Java. Collaborated effectively to deliver clean, scalable and efficient code.",
 };
 
@@ -61,6 +61,8 @@ export type Project = {
   image: string;
   dataAiHint: string;
   icon: LucideIcon;
+  githubUrl?: string;
+  liveUrl?: string;
 };
 
 export const projects: Project[] = [
@@ -73,6 +75,8 @@ export const projects: Project[] = [
     image: "https://picsum.photos/600/400",
     dataAiHint: "coding programming",
     icon: Code,
+    githubUrl: "https://github.com/KVishnuVarma/Code_clash",
+    liveUrl: "http://codeclashv.vercel.app/",
   },
   {
     id: "restaurant-management",
@@ -83,6 +87,7 @@ export const projects: Project[] = [
     image: "https://picsum.photos/600/401",
     dataAiHint: "restaurant food",
     icon: Bot,
+    githubUrl: "https://github.com/KVishnuVarma/resturant-s-page",
   },
   {
     id: "photography-portfolio",
@@ -93,6 +98,18 @@ export const projects: Project[] = [
     image: "https://picsum.photos/600/402",
     dataAiHint: "photography camera",
     icon: Star,
+    githubUrl: "https://github.com/KVishnuVarma/phani-photography",
+  },
+  {
+    id: "task-manager",
+    title: "Todo App",
+    description: "A collaborative tool to manage tasks and projects.",
+    features: ["Kanban board", "Real-time updates", "User authentication", "Drag and drop interface"],
+    techStack: ["React.js", "Tailwind CSS"],
+    image: "https://picsum.photos/600/404",
+    dataAiHint: "tasks productivity",
+    icon: CheckSquare,
+    githubUrl: "https://github.com/KVishnuVarma/Todo-App",
   },
   {
     id: "ecommerce-platform",
@@ -103,16 +120,6 @@ export const projects: Project[] = [
     image: "https://picsum.photos/600/403",
     dataAiHint: "shopping online",
     icon: Star,
-  },
-  {
-    id: "task-manager",
-    title: "Task Management App",
-    description: "A collaborative tool to manage tasks and projects.",
-    features: ["Kanban board", "Real-time updates", "User authentication", "Drag and drop interface"],
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-    image: "https://picsum.photos/600/404",
-    dataAiHint: "tasks productivity",
-    icon: Code,
   },
   {
     id: "weather-dashboard",

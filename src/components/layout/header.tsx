@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Code2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { personalDetails } from '@/lib/portfolio-data';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -33,6 +34,9 @@ const Header = () => {
     const element = document.querySelector(id);
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (id === '#home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     setMobileMenuOpen(false);
   };
@@ -68,7 +72,12 @@ const Header = () => {
             <NavItems />
           </nav>
           
-          <div className="md:hidden">
+          <div className="flex items-center gap-2 md:hidden">
+            <Button asChild>
+                <Link href={personalDetails.github} target="_blank" rel="noopener noreferrer">
+                    Resume
+                </Link>
+            </Button>
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -82,6 +91,13 @@ const Header = () => {
                 </div>
               </SheetContent>
             </Sheet>
+          </div>
+          <div className="hidden md:flex items-center gap-2">
+             <Button asChild>
+                <Link href={personalDetails.github} target="_blank" rel="noopener noreferrer">
+                    Resume
+                </Link>
+            </Button>
           </div>
         </div>
       </div>
