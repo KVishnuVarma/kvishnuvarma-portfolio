@@ -40,14 +40,14 @@ const Header = () => {
   const NavItems = () => (
     <>
       {navLinks.map((link) => (
-        <a
+        <Link
           key={link.href}
           href={link.href}
           onClick={(e) => handleScrollTo(e, link.href)}
           className="font-medium text-muted-foreground transition-colors hover:text-primary"
         >
           {link.label}
-        </a>
+        </Link>
       ))}
     </>
   );
