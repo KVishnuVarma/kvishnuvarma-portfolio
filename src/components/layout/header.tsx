@@ -59,11 +59,9 @@ const Header = () => {
     )}>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <Link href="#home" passHref legacyBehavior>
-            <a onClick={(e) => handleScrollTo(e, '#home')} className="flex items-center gap-2">
-              <Code2 className="h-8 w-8 text-primary" />
-              <span className="font-headline text-xl font-bold">ProfolioFlow</span>
-            </a>
+          <Link href="#home" onClick={(e) => handleScrollTo(e, '#home')} className="flex items-center gap-2">
+            <Code2 className="h-8 w-8 text-primary" />
+            <span className="font-headline text-xl font-bold">ProfolioFlow</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-6 text-sm">
