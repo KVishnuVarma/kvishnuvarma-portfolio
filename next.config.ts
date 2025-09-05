@@ -1,7 +1,14 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: '/', // all routes point to the homepage
+      },
+    ];
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
