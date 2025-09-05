@@ -65,7 +65,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           <Link href="#home" onClick={(e) => handleScrollTo(e, '#home')} className="flex items-center gap-2">
             <Code2 className="h-8 w-8 text-primary" />
-            <span className="font-headline text-xl font-bold">ProfolioFlow</span>
+            <span className="font-headline text-xl font-bold">Portfolio</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -74,7 +74,7 @@ const Header = () => {
           
           <div className="flex items-center gap-2 md:hidden">
             <Button asChild>
-                <Link href={personalDetails.github} target="_blank" rel="noopener noreferrer">
+                <Link href="https://drive.google.com/uc?export=download&id=1ZOBeHMmUoi55_etUuERwMQ4Z6j7REJsK" target="_blank" rel="noopener noreferrer">
                     Resume
                 </Link>
             </Button>
@@ -94,7 +94,7 @@ const Header = () => {
           </div>
           <div className="hidden md:flex items-center gap-2">
              <Button asChild>
-                <Link href={personalDetails.github} target="_blank" rel="noopener noreferrer">
+                <Link href="https://drive.google.com/uc?export=download&id=1ZOBeHMmUoi55_etUuERwMQ4Z6j7REJsK" target="_blank" rel="noopener noreferrer">
                     Resume
                 </Link>
             </Button>

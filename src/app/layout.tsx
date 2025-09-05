@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'ProfolioFlow | K. V. D. R. Varma',
+  title: 'K. V. D. R. Varma',
   description: 'Portfolio of KALIDINDI VISHNU DATTA RAGHU VARMA, a Computer Science Student & Full-Stack Developer.',
 };
 

@@ -1,4 +1,4 @@
-# **App Name**: ProfolioFlow
+# **App Name**: Portfolio
 
 ## Core Features:
 

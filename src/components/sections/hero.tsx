@@ -22,13 +22,14 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <div className="max-w-3xl mx-auto flex flex-col items-center">
-            <div className="relative w-40 h-40 mb-6">
+            <div className="relative w-64 h-64 mb-6 group overflow-hidden rounded-full border-4 border-primary shadow-lg">
                 <Image
-                    src="/profile.jpg"
+                    src="/profile.jpeg"
                     alt="KALIDINDI VISHNU DATTA RAGHU VARMA"
-                    width={160}
-                    height={160}
-                    className="rounded-full object-cover border-4 border-primary shadow-lg"
+                    width={512}
+                    height={512}
+                    quality={100}
+                    className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:filter group-hover:brightness-105"
                     priority
                 />
             </div>
