@@ -1,13 +1,14 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { personalDetails } from '@/lib/portfolio-data';
-import { Github, Linkedin, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, ArrowDown, Mail } from 'lucide-react';
 import AnimatedSection from '../animated-section';
 
 const Hero = () => {
-  const handleScrollToProjects = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleScrollTo = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
   };
   
   return (
@@ -20,7 +21,17 @@ const Hero = () => {
       
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto flex flex-col items-center">
+            <div className="relative w-40 h-40 mb-6">
+                <Image
+                    src="/profile.jpg"
+                    alt="KALIDINDI VISHNU DATTA RAGHU VARMA"
+                    width={160}
+                    height={160}
+                    className="rounded-full object-cover border-4 border-primary shadow-lg"
+                    priority
+                />
+            </div>
             <h1 className="text-4xl md:text-6xl font-headline font-bold text-foreground">
               {personalDetails.name}
             </h1>
@@ -28,24 +39,27 @@ const Hero = () => {
               {personalDetails.title}
             </p>
             <div className="mt-8 flex justify-center items-center gap-4">
-              <Button onClick={handleScrollToProjects}>
+              <Button onClick={(e) => handleScrollTo(e, '#projects')}>
                 View My Work
-                <ArrowDown className="ml-2 h-4 w-4" />
+                <ArrowDown/>
               </Button>
               <Button variant="secondary" asChild>
-                <a href={`mailto:${personalDetails.email}`}>Contact Me</a>
+                <Link href="#contact" onClick={(e) => handleScrollTo(e, '#contact')}>
+                  Contact Me
+                  <Mail />
+                </Link>
               </Button>
             </div>
             <div className="mt-8 flex justify-center items-center gap-2">
               <Button variant="ghost" size="icon" asChild>
                 <Link href={personalDetails.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="h-5 w-5" />
+                  <Github className="h-6 w-6" />
                   <span className="sr-only">GitHub</span>
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <Link href={personalDetails.linkedin} target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="h-5 w-5" />
+                  <Linkedin className="h-6 w-6" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
               </Button>
