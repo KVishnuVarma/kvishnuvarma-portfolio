@@ -3,13 +3,16 @@
 import { useRef, useEffect, useState, type ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
+type AnimationVariant = 'fade-up' | 'fade-in' | 'slide-in' | 'scale-in';
+
 type AnimatedSectionProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
+  variant?: AnimationVariant;
 };
 
-const AnimatedSection = ({ children, className, delay = 0 }: AnimatedSectionProps) => {
+const AnimatedSection = ({ children, className, delay = 0, variant = 'fade-up' }: AnimatedSectionProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -45,8 +48,17 @@ const AnimatedSection = ({ children, className, delay = 0 }: AnimatedSectionProp
     <div
       ref={ref}
       className={cn(
-        'transition-all duration-1000 ease-out',
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
+        'transition-all duration-700',
+        {
+          'animate-fade-up': variant === 'fade-up' && isVisible,
+          'animate-fade-in': variant === 'fade-in' && isVisible,
+          'animate-slide-in': variant === 'slide-in' && isVisible,
+          'animate-scale-in': variant === 'scale-in' && isVisible,
+          'opacity-0': !isVisible,
+          'translate-y-8': !isVisible && variant === 'fade-up',
+          '-translate-x-full': !isVisible && variant === 'slide-in',
+          'scale-95': !isVisible && variant === 'scale-in',
+        },
         className
       )}
     >
