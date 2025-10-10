@@ -67,6 +67,23 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "stack-genie",
+    title: "StackGenie",
+    description: "A full-stack application builder with AI-powered tools that enables users to build, design, and deploy applications using a visual builder interface.",
+    features: [
+      "Visual project builder",
+      "AI-powered code generation",
+      "Component library",
+      "Project management dashboard",
+      "Real-time collaboration"
+    ],
+    techStack: ["React", "TypeScript", "AI Integration", "Tailwind CSS"],
+    image: "/StackGenie.png",
+    dataAiHint: "ai development builder",
+    icon: Bot,
+    githubUrl: "https://github.com/KVishnuVarma/StackGenie",
+  },
+  {
     id: "code-clash",
     title: "Code Clash – Online Judge Platform",
     description: "A coding contest platform with role-based access for users and admins.",
@@ -99,16 +116,5 @@ export const projects: Project[] = [
     dataAiHint: "photography camera",
     icon: Star,
     githubUrl: "https://github.com/KVishnuVarma/phani-photography",
-  },
-  {
-    id: "task-manager",
-    title: "Todo App",
-    description: "A collaborative tool to manage tasks and projects.",
-    features: ["Kanban board", "Real-time updates", "User authentication", "Drag and drop interface"],
-    techStack: ["React.js", "Tailwind CSS"],
-    image: "/todo.jpg",
-    dataAiHint: "tasks productivity",
-    icon: CheckSquare,
-    githubUrl: "https://github.com/KVishnuVarma/Todo-App",
   },
 ];
