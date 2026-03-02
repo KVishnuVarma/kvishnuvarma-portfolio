@@ -93,7 +93,7 @@ const Header = () => {
           
           <div className="flex items-center gap-2 md:hidden">
             <Button asChild>
-                <Link href="https://drive.google.com/file/d/1d9LGRtT8bBJDWJotieokbZVuujpBIC40/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Link href="https://drive.google.com/file/d/1AVp4GWuujUvg8jLSYhzZNOUkDctS8Gli/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     Resume
                 </Link>
             </Button>
@@ -126,7 +126,7 @@ const Header = () => {
                 <span className="sr-only">Toggle theme</span>
               </Button>
               <Button asChild>
-                <Link href="https://drive.google.com/file/d/1d9LGRtT8bBJDWJotieokbZVuujpBIC40/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Link href="https://drive.google.com/file/d/1AVp4GWuujUvg8jLSYhzZNOUkDctS8Gli/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     Resume
                 </Link>
               </Button>

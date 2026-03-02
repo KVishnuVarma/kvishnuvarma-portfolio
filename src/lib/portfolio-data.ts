@@ -28,12 +28,12 @@ export const education = [
 ];
 
 export const skills = {
-  programming: ["Java", "Python", "JavaScript"],
+  programming: ["Java", "JavaScript"],
   frontend: ["React.js", "HTML5", "Tailwind CSS"],
   backend: ["Node.js", "Express.js", "REST APIs"],
   database: ["MongoDB", "NoSQL"],
   tools: ["Git", "GitHub", "Postman", "Vercel"],
-  other: ["Prompt Engineering", "Responsive Web Design"],
+  other: ["Responsive Web Design"],
   soft: ["Teamwork", "Time Management"],
 };
 
@@ -65,7 +65,7 @@ export type Project = {
   liveUrl?: string;
 };
 
-export const projects: Project[] = [
+export const upcomingProjects: Project[] = [
   {
     id: "stack-genie",
     title: "StackGenie",
@@ -83,6 +83,20 @@ export const projects: Project[] = [
     icon: Bot,
     githubUrl: "https://github.com/KVishnuVarma/StackGenie",
   },
+  {
+    id: "photography-portfolio",
+    title: "Photography Portfolio Website",
+    description: "A portfolio to display photography work using interactive layouts and transitions.",
+    features: ["Fast load times", "Mobile responsive design", "Smooth visual experience"],
+    techStack: ["React.js", "Framer Motion", "Tailwind CSS", "Vite"],
+    image: "/photographer.jpg",
+    dataAiHint: "photography camera",
+    icon: Star,
+    githubUrl: "https://github.com/KVishnuVarma/phani-photography",
+  },
+];
+
+export const projects: Project[] = [
   {
     id: "code-clash",
     title: "Code Clash – Online Judge Platform",
@@ -106,15 +120,5 @@ export const projects: Project[] = [
     icon: Bot,
     githubUrl: "https://github.com/KVishnuVarma/resturant-s-page",
   },
-  {
-    id: "photography-portfolio",
-    title: "Photography Portfolio Website",
-    description: "A portfolio to display photography work using interactive layouts and transitions.",
-    features: ["Fast load times", "Mobile responsive design", "Smooth visual experience"],
-    techStack: ["React.js", "Framer Motion", "Tailwind CSS", "Vite"],
-    image: "/photographer.jpg",
-    dataAiHint: "photography camera",
-    icon: Star,
-    githubUrl: "https://github.com/KVishnuVarma/phani-photography",
-  },
+
 ];

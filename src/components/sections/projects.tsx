@@ -1,6 +1,6 @@
 "use client";
 
-import { projects } from '@/lib/portfolio-data';
+import { projects, upcomingProjects } from '@/lib/portfolio-data';
 import ProjectCard from '@/components/project-card';
 import AnimatedSection from '../animated-section';
 
@@ -22,12 +22,29 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
+        {/* Completed Projects Section */}
         <AnimatedSection>
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">
             My Projects
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
+               <div key={project.id} onClick={() => handleProjectClick(project.id)} className="cursor-pointer">
+                 <AnimatedSection delay={index * 100}>
+                    <ProjectCard project={project} />
+                 </AnimatedSection>
+               </div>
+            ))}
+          </div>
+        </AnimatedSection>
+
+        {/* Upcoming/Working Projects Section */}
+        <AnimatedSection>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12 mt-20">
+            Currently Working On
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {upcomingProjects.map((project, index) => (
                <div key={project.id} onClick={() => handleProjectClick(project.id)} className="cursor-pointer">
                  <AnimatedSection delay={index * 100}>
                     <ProjectCard project={project} />
