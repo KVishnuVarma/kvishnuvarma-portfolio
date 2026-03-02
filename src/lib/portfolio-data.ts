@@ -83,17 +83,6 @@ export const upcomingProjects: Project[] = [
     icon: Bot,
     githubUrl: "https://github.com/KVishnuVarma/StackGenie",
   },
-  {
-    id: "photography-portfolio",
-    title: "Photography Portfolio Website",
-    description: "A portfolio to display photography work using interactive layouts and transitions.",
-    features: ["Fast load times", "Mobile responsive design", "Smooth visual experience"],
-    techStack: ["React.js", "Framer Motion", "Tailwind CSS", "Vite"],
-    image: "/photographer.jpg",
-    dataAiHint: "photography camera",
-    icon: Star,
-    githubUrl: "https://github.com/KVishnuVarma/phani-photography",
-  },
 ];
 
 export const projects: Project[] = [
@@ -108,6 +97,18 @@ export const projects: Project[] = [
     icon: Code,
     githubUrl: "https://github.com/KVishnuVarma/Code_clash",
     liveUrl: "http://codeclashv.vercel.app/",
+  },
+  {
+    id: "photography-portfolio",
+    title: "Photography Portfolio Website",
+    description: "A portfolio to display photography work using interactive layouts and transitions.",
+    features: ["Fast load times", "Mobile responsive design", "Smooth visual experience"],
+    techStack: ["React.js", "Framer Motion", "Tailwind CSS", "Vite"],
+    image: "/photographer.jpg",
+    dataAiHint: "photography camera",
+    icon: Star,
+    githubUrl: "https://github.com/KVishnuVarma/phani-photography",
+    liveUrl: "https://phani-photography.vercel.app/",
   },
   {
     id: "restaurant-management",
