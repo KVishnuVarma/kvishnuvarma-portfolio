@@ -17,12 +17,7 @@ export const education = [
   {
     degree: "Bachelor of Technology in Computer Science",
     institution: "KIET Group of Institutions, Andhra Pradesh",
-    icon: GraduationCap,
-  },
-  {
-    degree: "Diploma in Computer Engineering",
-    institution: "Kakatiya University, Telangana",
-    details: "70%",
+    details: "Focused on software engineering, algorithms, and modern web development practices.",
     icon: GraduationCap,
   },
 ];
